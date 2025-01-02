@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15
+    container_name: expense-db-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: app_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volume_db_data:/var/lib/postgresql/data
+
+  expense-app:
+    container_name: expense-api
+    restart: always
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: app_db
+    depends_on:
+      - db
+
+  # test-runner:
+  #   build:
+  #     context: .
+  #   command: ./run_tests.sh
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DB_HOST: db
+  #     DB_PORT: 5432
+  #     DB_USER: user
+  #     DB_PASSWORD: password
+  #     DB_NAME: app_db
+
+volumes:
+  db_data:

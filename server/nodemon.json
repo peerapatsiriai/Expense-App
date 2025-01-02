@@ -1,0 +1,5 @@
+{
+  "watch": ["src/cmd", "src/internal", "src/pkg"],
+  "ext": "go",
+  "exec": "go run src/cmd/main.go"
+}
