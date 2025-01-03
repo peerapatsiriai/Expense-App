@@ -28,7 +28,7 @@ const MenuAction: React.FC = () => {
         // backgroundColor: "rgba(108, 166, 241, 0.97)", 
         backgroundColor:"#000",
         // backgroundColor: "red",
-        backdropFilter: "blur(10px)", // Blur effect
+        backdropFilter: "blur(20px)", // Blur effect
         borderRadius: 2,
       }}
     >
