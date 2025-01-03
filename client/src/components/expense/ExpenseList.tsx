@@ -25,8 +25,8 @@ const ExpenseList: React.FC = () => {
         height: "100%", // Set height to 100% of the screen height
         margin: 1,
         marginTop: 5,
-        // backgroundColor: "rgba(255, 255, 255, 0.2)", 
-        backgroundColor: "blue",
+        backgroundColor: "rgba(78, 177, 111, 0.41)", 
+        // backgroundColor: "blue",
         backdropFilter: "blur(10px)", // Blur effect
         borderRadius: 2,
       }}
