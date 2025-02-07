@@ -1,0 +1,23 @@
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    font-size: 40px;
+}
+li ,a {
+    text-decoration: none;
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+    a{
+        padding: 0 30px;
+        font-size: 25px;
+        color: black;
+    }
+}
